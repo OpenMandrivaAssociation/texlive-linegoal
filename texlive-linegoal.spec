@@ -1,3 +1,9 @@
+# revision 21523
+# category Package
+# catalog-ctan /macros/latex/contrib/linegoal
+# catalog-date 2011-02-25 20:25:45 +0100
+# catalog-license lppl1.3
+# catalog-version 2.9
 Name:		texlive-linegoal
 Version:	2.9
 Release:	1
@@ -50,6 +56,7 @@ initial text, and make the table fill the rest of the line.
 %doc %{_texmfdistdir}/source/latex/linegoal/linegoal.drv
 %doc %{_texmfdistdir}/source/latex/linegoal/linegoal.dtx
 %doc %{_texmfdistdir}/source/latex/linegoal/linegoal.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -60,3 +67,5 @@ initial text, and make the table fill the rest of the line.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
