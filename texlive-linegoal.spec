@@ -56,3 +56,17 @@ initial text, and make the table fill the rest of the line.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.9-2
++ Revision: 753311
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.9-1
++ Revision: 718861
+- texlive-linegoal
+- texlive-linegoal
+- texlive-linegoal
+- texlive-linegoal
+
