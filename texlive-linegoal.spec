@@ -6,7 +6,7 @@
 # catalog-version 2.9
 Name:		texlive-linegoal
 Version:	2.9
-Release:	5
+Release:	6
 Summary:	A "dimen" that returns the space left on the line
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/linegoal
