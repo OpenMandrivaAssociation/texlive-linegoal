@@ -1,19 +1,13 @@
-# revision 21523
-# category Package
-# catalog-ctan /macros/latex/contrib/linegoal
-# catalog-date 2011-02-25 20:25:45 +0100
-# catalog-license lppl1.3
-# catalog-version 2.9
 Name:		texlive-linegoal
-Version:	2.9
-Release:	11
+Version:	21523
+Release:	1
 Summary:	A "dimen" that returns the space left on the line
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/linegoal
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/linegoal.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/linegoal.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/linegoal.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/linegoal.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/linegoal.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/linegoal.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -30,12 +24,12 @@ four \\\hline \end{tabularx} will position the table after the
 initial text, and make the table fill the rest of the line.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -49,24 +43,11 @@ initial text, and make the table fill the rest of the line.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.9-2
-+ Revision: 753311
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.9-1
-+ Revision: 718861
-- texlive-linegoal
-- texlive-linegoal
-- texlive-linegoal
-- texlive-linegoal
-
