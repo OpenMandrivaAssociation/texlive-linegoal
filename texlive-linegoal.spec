@@ -1,6 +1,6 @@
 Name:		texlive-linegoal
 Version:	21523
-Release:	1
+Release:	2
 Summary:	A "dimen" that returns the space left on the line
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/linegoal
