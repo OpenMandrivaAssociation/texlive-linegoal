@@ -3,7 +3,7 @@ Version:	21523
 Release:	2
 Summary:	A "dimen" that returns the space left on the line
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/linegoal
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/linegoal
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/linegoal.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/linegoal.doc.r%{version}.tar.xz
